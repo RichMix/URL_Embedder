@@ -101,5 +101,3 @@ function initWidget(element, data, api) {
 ```
 
 Restyle, Repackage and Reuse. <3
-```
-
