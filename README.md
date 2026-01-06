@@ -3,9 +3,9 @@ Allows Embedding of a URL on a website using basic HTML, CSS, and JavaScript
 
 I needed one that worked to showcase my projects, so I made this. 
 
-## Tested in CodePen.io and running on my main site.
+### Tested in CodePen.io and running on my main site.
 
-:/ Make sure to incorporate this as a component, and replace the `src=" "` with your website of choice.
+#### Make sure to incorporate this as a component, and replace the `src=" "` with your website of choice.
 
 ```html
 <div class="widget">
@@ -19,7 +19,7 @@ I needed one that worked to showcase my projects, so I made this.
   </div>
 ``` 
 
-:/ Ensure Tailwind CSS and dependencies installed
+#### Ensure Tailwind CSS and dependencies installed
 
 ```CSS
 /* Tailwind CSS :D */
@@ -77,5 +77,29 @@ I needed one that worked to showcase my projects, so I made this.
 }
 
 /* OOGA BOOGA! */
+```
+``` JavaScript
+
+function initWidget(element, data, api) {
+  window.dmAPI.runOnReady("iframeEmbedWidget", () => {
+    const container = element.querySelector(".iframe-embed-container");
+    const iframe = element.querySelector(".embedded-frame");
+
+    if (iframe) {
+      // 4DD L04D 3V3N7 L1573N3R
+      iframe.addEventListener("load", function () {
+        container.classList.add("loaded");
+      });
+
+      // 4DD 3RR0R H4NDL3R
+      iframe.addEventListener("error", function () {
+        console.error("Failed to load iframe content");
+      });
+    }
+  });
+}
+```
+
+Restyle, Repackage and Reuse. <3
 ```
 
